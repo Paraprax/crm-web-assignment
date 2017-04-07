@@ -1,13 +1,16 @@
 require_relative 'contact'
 require 'sinatra'
 
-#I feel like keeping these contacts
-Contact.create('Orson', 'Welles', 'kane@citizen.com', 'CEO')
-Contact.create('Tyrone', 'Power', 'cap@shazam.com', 'Co-Founder')
-Contact.create('Christopher', 'Reeve', 'supes@wb.com', 'Believer')
+Contact.create('Lois', 'Lane', 'll@dailyplanet.com', 'Reporter')
+Contact.create('Clark', 'Kent', 'ck@dailyplanet.com', 'Reporter')
+Contact.create('Jimmy', 'Olsen', 'supermanspal@dailyplanet.com', 'Photographer')
+Contact.create('Perry', 'White', 'chief@dailyplanet.com', 'Editor-In-Chief')
+Contact.create('Lex', 'Luthor', 'lex@lexcorp.com', 'C.E.O.')
+Contact.create('Gus', 'Gorman', 'gus@webscoe.com', 'Programmer')
+
 
 get '/' do
-  @crm_app_name = "Parker's CRM"
+  @crm_app_name = "METROLODEX"
   erb :index
 end
 

@@ -1,12 +1,20 @@
-<h1>Welcome to <%= @crm_app_name %>!</h1>
-<p>Main menu</p>
-<ul>
-  <li><a href="/contacts">View all contacts</a></li>
+<main-header><%= @crm_app_name %></main-header>
+<subheader><%= "KEEPING THE CITY OF TOMORROW CONNECTED TODAY" %></subheader>
+
+  <div><homebar><a href="/">HOME</a></homebar></div>
+
+  <div><addnew><a href="/contacts/new">ADD A NEW CONTACT</a></addnew></div>
+
+  <ul>
+  <% Contact.all.each do |contact| %>
+    <ul><%= contact.first_name %> <%= contact.last_name %> <email>(<%= contact.email %>)</email></ul>
+     <ul><position><%= contact.note %></position></ul>
+  <% end %>
+  </ul>
+
+
   <!-- please complete me with links to other actions -->
 
-  <li><a href="/contacts/new">Add a new contact</a></li>
 
 
-</ul>
-
-<h6><%= DateTime.now.strftime("Today's date is %d/%m//%Y") %></h6>
+<h6><p style="color:#333399"><%= DateTime.now.strftime("Today's date is %d/%m//%Y") %></p></h6>
