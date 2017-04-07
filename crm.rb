@@ -1,9 +1,7 @@
-# Implement the new web-based CRM here.
-# Do NOT copy the CRM class from the old crm assignment, as it won't work at all for the web-based version!
-# You'll have to implement it from scratch.
 require_relative 'contact'
 require 'sinatra'
 
+#I feel like keeping these contacts
 Contact.create('Orson', 'Welles', 'kane@citizen.com', 'CEO')
 Contact.create('Tyrone', 'Power', 'cap@shazam.com', 'Co-Founder')
 Contact.create('Christopher', 'Reeve', 'supes@wb.com', 'Believer')
@@ -19,4 +17,9 @@ end
 
 get '/contacts/new' do
  erb :new_contact
+end
+
+post '/contacts' do
+   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+   redirect to('/contacts')
 end
