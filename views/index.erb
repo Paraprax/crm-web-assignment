@@ -1,14 +1,15 @@
-<main-header><%= @crm_app_name %></main-header>
-<subheader><%= "KEEPING THE CITY OF TOMORROW CONNECTED TODAY" %></subheader>
+<div class="mainheader"><%= @crm_app_name %></div>
 
-  <div><homebar><a href="/">HOME</a></homebar></div>
+<div class="subscript"><%= "KEEPING THE CITY OF TOMORROW CONNECTED TODAY" %></div>
 
-  <div><addnew><a href="/contacts/new">ADD A NEW CONTACT</a></addnew></div>
+  <div class="linkbars"><a id="homebar" href="/">HOME</a></div>
+  <div class="linkbars"><a id="addnew" href="/contacts/new">ADD A NEW CONTACT</a></div>
+  <div class="linkbars"><a id="about" href="/about">ABOUT</a></div>
 
   <ul>
   <% Contact.all.each do |contact| %>
-    <ul><%= contact.first_name %> <%= contact.last_name %> <email>(<%= contact.email %>)</email></ul>
-     <ul><position><%= contact.note %></position></ul>
+    <ul class="contactentries"><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email%>)
+    <br class="position"><%=contact.note %></br></ul>
   <% end %>
   </ul>
 
@@ -17,4 +18,5 @@
 
 
 
-<h6><p style="color:#333399"><%= DateTime.now.strftime("Today's date is %d/%m//%Y") %></p></h6>
+<h4><p class="date" style="color:#333399"><%= DateTime.now.strftime("Today's date is %d/%m//%Y")%></p>
+  <p class="date" style="color:#BBBBBB"><%= "©Bitmaker Labs 2017"%></p></h4>

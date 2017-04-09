@@ -22,6 +22,10 @@ get '/contacts/new' do
  erb :new_contact
 end
 
+get '/about' do
+  erb :about
+end
+
 post '/contacts' do
    Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
    redirect to('/contacts')

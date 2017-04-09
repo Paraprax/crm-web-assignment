@@ -2,7 +2,7 @@
 
 <ul>
 <% Contact.all.each do |contact| %>
-  <contactstyle><ul><%= contact.first_name %> <%= contact.last_name %> <email>(<%= contact.email %>)</email></ul>
-   <ul><position><%= contact.note %></contactstyle></ul>
+  <contactentries><ul><%= contact.first_name %> <%= contact.last_name %> <email>(<%= contact.email %>)</email></ul>
+   <ul><%= contact.note %></contactstyle></ul>
 <% end %>
 </ul>
