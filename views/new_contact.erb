@@ -1,9 +1,27 @@
-<h1>Create new Contact</h1>
+<h2>Create new Contact</h2>
 
+<div class="form-container">
 <form action='/contacts' method='post'>
-  <input type='text' name='first_name'>
-  <input type='text' name='last_name'>
-  <input type='text' name='email'>
-  <input type='text' name='note'>
-  <input type='submit' value='New Contact'>
+  <label>
+    First Name:
+    <input type='text' name='first_name'>
+  </label>
+
+  <label>
+    Last Name:
+    <input type='text' name='last_name'>
+  </label>
+
+  <label>
+    Email:
+    <input type='text' name='email'>
+  </label>
+
+  <label>
+    Note:
+    <input type='text' name='note'>
+  </label>
+
+  <input type='submit' value='Create New Contact'>
 </form>
+</div>
