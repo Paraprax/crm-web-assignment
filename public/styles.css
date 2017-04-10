@@ -62,18 +62,30 @@ body {
   font-weight: 400;
   background-color: #ADD8E6;
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 50px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   padding-left: 80px;
   padding-right: 0px;
 }
 
-.position {
-    font-family: times;
-    font-size: 12px
+.contactoptions {
+  display: block;
+  width: 91%;
+  font-family: times, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ADD8E6;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  margin-left: 0px;
+  margin-right: 50px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  padding-right: 0px;
 }
 
 .date {

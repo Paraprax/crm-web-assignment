@@ -11,13 +11,10 @@
   <ul>
   <% Contact.all.each do |contact| %>
     <ul class="contactentries"><b><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email%>)</b>
-    <br class="position"><%=contact.note %></br></ul>
+    <br><%=contact.note %></br></ul>
+    <ul class="contactoptions"> Edit | Delete </ul>
   <% end %>
   </ul>
-
-
-  <!-- please complete me with links to other actions -->
-
 
 
 <h4><p class="date" style="color:#333399"><%= DateTime.now.strftime("Today's date is %d/%m//%Y")%></p>
