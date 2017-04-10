@@ -62,6 +62,27 @@ put '/contacts/:id/edit' do
   end
 end
 
+get '/contacts/:id/delete' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    @contact.delete
+    redirect to ('/')
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+delete '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    @contact.delete
+    redirect to ('/')
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+
 get '/about' do
   erb :about
 end
